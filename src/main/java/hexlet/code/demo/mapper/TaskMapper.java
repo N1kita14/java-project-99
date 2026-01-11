@@ -4,7 +4,12 @@ import hexlet.code.demo.dto.task.TaskCreateDto;
 import hexlet.code.demo.dto.task.TaskResponseDto;
 import hexlet.code.demo.dto.task.TaskUpdateDto;
 import hexlet.code.demo.model.Task;
-import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
+import org.mapstruct.MappingTarget;
+import org.mapstruct.Mapping;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
         uses = {JsonNullableMapper.class,

@@ -6,7 +6,12 @@ import hexlet.code.demo.dto.task_status.TaskStatusUpdateDto;
 import hexlet.code.demo.exception.NotFoundException;
 import hexlet.code.demo.model.TaskStatus;
 import hexlet.code.demo.repository.TaskStatusRepository;
-import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
+import org.mapstruct.MappingTarget;
+import org.mapstruct.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,

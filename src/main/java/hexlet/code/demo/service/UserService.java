@@ -1,8 +1,8 @@
-package hexlet.code.service;
+package hexlet.code.demo.service;
 
-import hexlet.code.dto.user.UserCreateDto;
-import hexlet.code.dto.user.UserResponseDto;
-import hexlet.code.dto.user.UserUpdateDto;
+import hexlet.code.demo.dto.user.UserCreateDto;
+import hexlet.code.demo.dto.user.UserResponseDto;
+import hexlet.code.demo.dto.user.UserUpdateDto;
 
 import java.util.List;
 

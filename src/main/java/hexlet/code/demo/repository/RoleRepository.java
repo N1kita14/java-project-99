@@ -1,6 +1,6 @@
-package hexlet.code.repository;
+package hexlet.code.demo.repository;
 
-import hexlet.code.model.Role;
+import hexlet.code.demo.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

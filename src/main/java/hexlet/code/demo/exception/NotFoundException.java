@@ -1,4 +1,4 @@
-package hexlet.code.exception;
+package hexlet.code.demo.exception;
 
 public class NotFoundException extends RuntimeException {
 

@@ -1,10 +1,10 @@
-package hexlet.code.controller;
+package hexlet.code.demo.controller;
 
-import hexlet.code.dto.task.TaskCreateDto;
-import hexlet.code.dto.task.TaskFiltrationDto;
-import hexlet.code.dto.task.TaskResponseDto;
-import hexlet.code.dto.task.TaskUpdateDto;
-import hexlet.code.service.TaskService;
+import hexlet.code.demo.dto.task.TaskCreateDto;
+import hexlet.code.demo.dto.task.TaskFiltrationDto;
+import hexlet.code.demo.dto.task.TaskResponseDto;
+import hexlet.code.demo.dto.task.TaskUpdateDto;
+import hexlet.code.demo.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

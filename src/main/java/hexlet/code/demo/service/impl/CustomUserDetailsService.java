@@ -1,10 +1,10 @@
-package hexlet.code.service.impl;
+package hexlet.code.demo.service.impl;
 
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.model.Role;
-import hexlet.code.model.User;
-import hexlet.code.repository.RoleRepository;
-import hexlet.code.repository.UserRepository;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.model.Role;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.RoleRepository;
+import hexlet.code.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;

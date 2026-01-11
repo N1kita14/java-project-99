@@ -1,8 +1,8 @@
-package hexlet.code.service;
+package hexlet.code.demo.service;
 
-import hexlet.code.dto.label.LabelCreateDto;
-import hexlet.code.dto.label.LabelResponseDto;
-import hexlet.code.dto.label.LabelUpdateDto;
+import hexlet.code.demo.dto.label.LabelCreateDto;
+import hexlet.code.demo.dto.label.LabelResponseDto;
+import hexlet.code.demo.dto.label.LabelUpdateDto;
 
 import java.util.List;
 

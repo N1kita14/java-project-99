@@ -1,7 +1,7 @@
-package hexlet.code.util;
+package hexlet.code.demo.util;
 
-import hexlet.code.model.User;
-import hexlet.code.repository.UserRepository;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;

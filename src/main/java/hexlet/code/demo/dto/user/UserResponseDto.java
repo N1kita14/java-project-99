@@ -1,4 +1,4 @@
-package hexlet.code.dto.user;
+package hexlet.code.demo.dto.user;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,14 +1,14 @@
-package hexlet.code.service.impl;
+package hexlet.code.demo.service.impl;
 
-import hexlet.code.dto.user.UserCreateDto;
-import hexlet.code.dto.user.UserResponseDto;
-import hexlet.code.dto.user.UserUpdateDto;
-import hexlet.code.exception.AlreadyExistException;
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.mapper.UserMapper;
-import hexlet.code.model.User;
-import hexlet.code.repository.UserRepository;
-import hexlet.code.service.UserService;
+import hexlet.code.demo.dto.user.UserCreateDto;
+import hexlet.code.demo.dto.user.UserResponseDto;
+import hexlet.code.demo.dto.user.UserUpdateDto;
+import hexlet.code.demo.exception.AlreadyExistException;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.mapper.UserMapper;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.UserRepository;
+import hexlet.code.demo.service.UserService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

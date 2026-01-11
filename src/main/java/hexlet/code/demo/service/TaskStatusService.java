@@ -1,8 +1,8 @@
-package hexlet.code.service;
+package hexlet.code.demo.service;
 
-import hexlet.code.dto.task_status.TaskStatusCreateDto;
-import hexlet.code.dto.task_status.TaskStatusResponseDto;
-import hexlet.code.dto.task_status.TaskStatusUpdateDto;
+import hexlet.code.demo.dto.task_status.TaskStatusCreateDto;
+import hexlet.code.demo.dto.task_status.TaskStatusResponseDto;
+import hexlet.code.demo.dto.task_status.TaskStatusUpdateDto;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package hexlet.code.controller;
+package hexlet.code.demo.controller;
 
-import hexlet.code.dto.user.UserCreateDto;
-import hexlet.code.dto.user.UserResponseDto;
-import hexlet.code.dto.user.UserUpdateDto;
-import hexlet.code.service.UserService;
-import hexlet.code.util.UserUtils;
+import hexlet.code.demo.dto.user.UserCreateDto;
+import hexlet.code.demo.dto.user.UserResponseDto;
+import hexlet.code.demo.dto.user.UserUpdateDto;
+import hexlet.code.demo.service.UserService;
+import hexlet.code.demo.util.UserUtils;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

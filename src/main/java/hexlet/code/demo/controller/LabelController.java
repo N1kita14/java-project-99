@@ -1,9 +1,9 @@
-package hexlet.code.controller;
+package hexlet.code.demo.controller;
 
-import hexlet.code.dto.label.LabelCreateDto;
-import hexlet.code.dto.label.LabelResponseDto;
-import hexlet.code.dto.label.LabelUpdateDto;
-import hexlet.code.service.LabelService;
+import hexlet.code.demo.dto.label.LabelCreateDto;
+import hexlet.code.demo.dto.label.LabelResponseDto;
+import hexlet.code.demo.dto.label.LabelUpdateDto;
+import hexlet.code.demo.service.LabelService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

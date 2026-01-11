@@ -1,4 +1,4 @@
-package hexlet.code.util;
+package hexlet.code.demo.util;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,10 +1,10 @@
-package hexlet.code.handler;
+package hexlet.code.demo.handler;
 
-import hexlet.code.dto.error.ErrorMessageResponse;
-import hexlet.code.dto.error.ValidationError;
-import hexlet.code.dto.error.Violation;
-import hexlet.code.exception.AlreadyExistException;
-import hexlet.code.exception.NotFoundException;
+import hexlet.code.demo.dto.error.ErrorMessageResponse;
+import hexlet.code.demo.dto.error.ValidationError;
+import hexlet.code.demo.dto.error.Violation;
+import hexlet.code.demo.exception.AlreadyExistException;
+import hexlet.code.demo.exception.NotFoundException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;

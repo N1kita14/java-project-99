@@ -1,9 +1,9 @@
-package hexlet.code.mapper;
+package hexlet.code.demo.mapper;
 
-import hexlet.code.dto.task.TaskCreateDto;
-import hexlet.code.dto.task.TaskResponseDto;
-import hexlet.code.dto.task.TaskUpdateDto;
-import hexlet.code.model.Task;
+import hexlet.code.demo.dto.task.TaskCreateDto;
+import hexlet.code.demo.dto.task.TaskResponseDto;
+import hexlet.code.demo.dto.task.TaskUpdateDto;
+import hexlet.code.demo.model.Task;
 import org.mapstruct.*;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,

@@ -1,10 +1,10 @@
-package hexlet.code.mapper;
+package hexlet.code.demo.mapper;
 
-import hexlet.code.dto.label.LabelCreateDto;
-import hexlet.code.dto.label.LabelResponseDto;
-import hexlet.code.dto.label.LabelUpdateDto;
-import hexlet.code.model.Label;
-import hexlet.code.repository.LabelRepository;
+import hexlet.code.demo.dto.label.LabelCreateDto;
+import hexlet.code.demo.dto.label.LabelResponseDto;
+import hexlet.code.demo.dto.label.LabelUpdateDto;
+import hexlet.code.demo.model.Label;
+import hexlet.code.demo.repository.LabelRepository;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,9 +1,9 @@
-package hexlet.code.service;
+package hexlet.code.demo.service;
 
-import hexlet.code.dto.task.TaskCreateDto;
-import hexlet.code.dto.task.TaskFiltrationDto;
-import hexlet.code.dto.task.TaskResponseDto;
-import hexlet.code.dto.task.TaskUpdateDto;
+import hexlet.code.demo.dto.task.TaskCreateDto;
+import hexlet.code.demo.dto.task.TaskFiltrationDto;
+import hexlet.code.demo.dto.task.TaskResponseDto;
+import hexlet.code.demo.dto.task.TaskUpdateDto;
 
 import java.util.List;
 

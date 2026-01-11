@@ -1,14 +1,14 @@
-package hexlet.code.component;
+package hexlet.code.demo.component;
 
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.model.Label;
-import hexlet.code.model.Role;
-import hexlet.code.model.TaskStatus;
-import hexlet.code.model.User;
-import hexlet.code.repository.LabelRepository;
-import hexlet.code.repository.RoleRepository;
-import hexlet.code.repository.TaskStatusRepository;
-import hexlet.code.service.impl.CustomUserDetailsService;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.model.Label;
+import hexlet.code.demo.model.Role;
+import hexlet.code.demo.model.TaskStatus;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.LabelRepository;
+import hexlet.code.demo.repository.RoleRepository;
+import hexlet.code.demo.repository.TaskStatusRepository;
+import hexlet.code.demo.service.impl.CustomUserDetailsService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

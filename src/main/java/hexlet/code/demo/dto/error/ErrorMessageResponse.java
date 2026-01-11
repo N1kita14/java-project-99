@@ -1,4 +1,4 @@
-package hexlet.code.dto.error;
+package hexlet.code.demo.dto.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

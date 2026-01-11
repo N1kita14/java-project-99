@@ -1,15 +1,14 @@
-package hexlet.code.service.impl;
+package hexlet.code.demo.service.impl;
 
-
-import hexlet.code.dto.label.LabelCreateDto;
-import hexlet.code.dto.label.LabelResponseDto;
-import hexlet.code.dto.label.LabelUpdateDto;
-import hexlet.code.exception.AlreadyExistException;
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.mapper.LabelMapper;
-import hexlet.code.model.Label;
-import hexlet.code.repository.LabelRepository;
-import hexlet.code.service.LabelService;
+import hexlet.code.demo.dto.label.LabelCreateDto;
+import hexlet.code.demo.dto.label.LabelResponseDto;
+import hexlet.code.demo.dto.label.LabelUpdateDto;
+import hexlet.code.demo.exception.AlreadyExistException;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.mapper.LabelMapper;
+import hexlet.code.demo.model.Label;
+import hexlet.code.demo.repository.LabelRepository;
+import hexlet.code.demo.service.LabelService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

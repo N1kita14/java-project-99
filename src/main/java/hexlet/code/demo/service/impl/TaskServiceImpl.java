@@ -1,15 +1,15 @@
-package hexlet.code.service.impl;
+package hexlet.code.demo.service.impl;
 
-import hexlet.code.dto.task.TaskCreateDto;
-import hexlet.code.dto.task.TaskFiltrationDto;
-import hexlet.code.dto.task.TaskResponseDto;
-import hexlet.code.dto.task.TaskUpdateDto;
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.mapper.TaskMapper;
-import hexlet.code.model.Task;
-import hexlet.code.repository.TaskRepository;
-import hexlet.code.repository.specification.TaskSpecification;
-import hexlet.code.service.TaskService;
+import hexlet.code.demo.dto.task.TaskCreateDto;
+import hexlet.code.demo.dto.task.TaskFiltrationDto;
+import hexlet.code.demo.dto.task.TaskResponseDto;
+import hexlet.code.demo.dto.task.TaskUpdateDto;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.mapper.TaskMapper;
+import hexlet.code.demo.model.Task;
+import hexlet.code.demo.repository.TaskRepository;
+import hexlet.code.demo.repository.specification.TaskSpecification;
+import hexlet.code.demo.service.TaskService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

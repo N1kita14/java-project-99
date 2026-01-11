@@ -1,4 +1,4 @@
-package hexlet.code.config;
+package hexlet.code.demo.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.SerializationFeature;

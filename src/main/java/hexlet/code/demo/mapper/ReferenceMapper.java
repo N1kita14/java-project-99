@@ -1,6 +1,6 @@
-package hexlet.code.mapper;
+package hexlet.code.demo.mapper;
 
-import hexlet.code.model.BaseEntity;
+import hexlet.code.demo.model.BaseEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.mapstruct.Mapper;

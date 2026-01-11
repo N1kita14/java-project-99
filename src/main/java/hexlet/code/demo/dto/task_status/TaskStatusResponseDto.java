@@ -1,4 +1,4 @@
-package hexlet.code.dto.task_status;
+package hexlet.code.demo.dto.task_status;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

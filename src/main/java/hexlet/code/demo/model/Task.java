@@ -1,4 +1,4 @@
-package hexlet.code.model;
+package hexlet.code.demo.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

@@ -1,12 +1,12 @@
-package hexlet.code.mapper;
+package hexlet.code.demo.mapper;
 
-import hexlet.code.dto.user.UserCreateDto;
-import hexlet.code.dto.user.UserResponseDto;
-import hexlet.code.dto.user.UserUpdateDto;
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.model.Role;
-import hexlet.code.model.User;
-import hexlet.code.repository.RoleRepository;
+import hexlet.code.demo.dto.user.UserCreateDto;
+import hexlet.code.demo.dto.user.UserResponseDto;
+import hexlet.code.demo.dto.user.UserUpdateDto;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.model.Role;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.RoleRepository;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

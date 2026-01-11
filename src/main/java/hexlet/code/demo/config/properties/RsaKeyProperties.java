@@ -1,4 +1,4 @@
-package hexlet.code.config.properties;
+package hexlet.code.demo.config.properties;
 
 import lombok.Getter;
 import lombok.Setter;

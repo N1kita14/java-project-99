@@ -1,11 +1,11 @@
-package hexlet.code.mapper;
+package hexlet.code.demo.mapper;
 
-import hexlet.code.dto.task_status.TaskStatusCreateDto;
-import hexlet.code.dto.task_status.TaskStatusResponseDto;
-import hexlet.code.dto.task_status.TaskStatusUpdateDto;
-import hexlet.code.exception.NotFoundException;
-import hexlet.code.model.TaskStatus;
-import hexlet.code.repository.TaskStatusRepository;
+import hexlet.code.demo.dto.task_status.TaskStatusCreateDto;
+import hexlet.code.demo.dto.task_status.TaskStatusResponseDto;
+import hexlet.code.demo.dto.task_status.TaskStatusUpdateDto;
+import hexlet.code.demo.exception.NotFoundException;
+import hexlet.code.demo.model.TaskStatus;
+import hexlet.code.demo.repository.TaskStatusRepository;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 

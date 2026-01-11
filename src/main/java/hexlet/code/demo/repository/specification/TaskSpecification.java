@@ -1,7 +1,7 @@
-package hexlet.code.repository.specification;
+package hexlet.code.demo.repository.specification;
 
-import hexlet.code.dto.task.TaskFiltrationDto;
-import hexlet.code.model.Task;
+import hexlet.code.demo.dto.task.TaskFiltrationDto;
+import hexlet.code.demo.model.Task;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 

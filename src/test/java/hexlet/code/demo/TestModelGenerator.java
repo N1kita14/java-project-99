@@ -1,8 +1,8 @@
-package hexlet.code;
+package hexlet.code.demo;
 
-import hexlet.code.model.Task;
-import hexlet.code.model.TaskStatus;
-import hexlet.code.model.User;
+import hexlet.code.demo.model.Task;
+import hexlet.code.demo.model.TaskStatus;
+import hexlet.code.demo.model.User;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import net.datafaker.Faker;

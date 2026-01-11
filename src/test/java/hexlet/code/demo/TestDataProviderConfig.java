@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.demo;
 
 import net.datafaker.Faker;
 import org.springframework.context.annotation.Bean;

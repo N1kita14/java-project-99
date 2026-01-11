@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.demo;
 
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

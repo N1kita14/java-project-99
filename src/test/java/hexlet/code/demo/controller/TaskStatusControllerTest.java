@@ -1,21 +1,21 @@
-package hexlet.code.controller;
+package hexlet.code.demo.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import hexlet.code.IntegrationTest;
-import hexlet.code.TestModelGenerator;
-import hexlet.code.component.DataInitializer;
-import hexlet.code.dto.task_status.TaskStatusCreateDto;
-import hexlet.code.dto.task_status.TaskStatusResponseDto;
-import hexlet.code.dto.task_status.TaskStatusUpdateDto;
-import hexlet.code.mapper.TaskStatusMapper;
-import hexlet.code.model.Task;
-import hexlet.code.model.TaskStatus;
-import hexlet.code.model.User;
-import hexlet.code.repository.TaskRepository;
-import hexlet.code.repository.TaskStatusRepository;
-import hexlet.code.repository.UserRepository;
-import hexlet.code.util.JWTUtils;
+import hexlet.code.demo.IntegrationTest;
+import hexlet.code.demo.TestModelGenerator;
+import hexlet.code.demo.component.DataInitializer;
+import hexlet.code.demo.dto.task_status.TaskStatusCreateDto;
+import hexlet.code.demo.dto.task_status.TaskStatusResponseDto;
+import hexlet.code.demo.dto.task_status.TaskStatusUpdateDto;
+import hexlet.code.demo.mapper.TaskStatusMapper;
+import hexlet.code.demo.model.Task;
+import hexlet.code.demo.model.TaskStatus;
+import hexlet.code.demo.model.User;
+import hexlet.code.demo.repository.TaskRepository;
+import hexlet.code.demo.repository.TaskStatusRepository;
+import hexlet.code.demo.repository.UserRepository;
+import hexlet.code.demo.util.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.instancio.Instancio;
@@ -30,7 +30,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
-import static hexlet.code.handler.GlobalExceptionHandler.TASK_STATUS_DELETE_ERROR_MESSAGE;
+import static hexlet.code.demo.handler.GlobalExceptionHandler.TASK_STATUS_DELETE_ERROR_MESSAGE;
 import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.core.StringContains.containsString;

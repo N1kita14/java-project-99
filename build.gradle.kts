@@ -76,7 +76,7 @@ sonar {
 
 sentry {
     includeSourceContext = true
-    org = "elsaakhmatyanova"
+    org = "nikita14"
     projectName = "java-spring-boot"
     authToken = System.getenv("SENTRY_AUTH_TOKEN")
 }

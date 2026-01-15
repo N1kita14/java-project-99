@@ -44,6 +44,7 @@ public class SecurityConfig {
     }
 
     @Bean
+    @Profile("!local")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .oauth2ResourceServer(AbstractHttpConfigurer::disable)

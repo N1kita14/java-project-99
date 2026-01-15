@@ -22,7 +22,7 @@ java {
 }
 
 application {
-    mainClass = "hexlet.code.AppApplication"
+    mainClass = "hexlet.code.demo.AppApplication"
 }
 
 configurations {
@@ -68,8 +68,8 @@ checkstyle {
 
 sonar {
     properties {
-        property("sonar.projectKey", "ElsaAkhmatyanova_java-project-99")
-        property("sonar.organization", "elsaakhmatyanova")
+        property("sonar.projectKey", "Nikita14_java-project-99")
+        property("sonar.organization", "nikita14")
         property("sonar.host.url", "https://sonarcloud.io")
     }
 }

@@ -71,7 +71,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/h2-console/**", "/favicon.ico").permitAll()
+                        .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/api/login").permitAll()
                         .requestMatchers("/", "/index.html").permitAll()
                         .requestMatchers("/assets/**").permitAll()

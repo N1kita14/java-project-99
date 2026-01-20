@@ -85,7 +85,7 @@ public class SecurityConfig {
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                .httpBasic(AbstractHttpConfigurer::disable);
+                .httpBasic(Customizer.withDefaults());
 
         return http.build();
     }

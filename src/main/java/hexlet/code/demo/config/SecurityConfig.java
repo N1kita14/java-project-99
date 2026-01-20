@@ -67,30 +67,23 @@ public class SecurityConfig {
     public SecurityFilterChain localSecurityFilterChain(HttpSecurity http) throws Exception {
         http
                 .oauth2ResourceServer(AbstractHttpConfigurer::disable)
+
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                "/", "/index.html",
-                                "/favicon.ico",
-                                "/*.js", "/*.css", "/*.map",
-                                "/assets/**"
-                        ).permitAll()
-
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/api/login").permitAll()
+                        .requestMatchers("/", "/index.html").permitAll()
+                        .requestMatchers("/assets/**").permitAll()
                         .requestMatchers("/v3/**").permitAll()
                         .requestMatchers("/swagger-ui.html", "/swagger-ui/**").permitAll()
-
-                        .requestMatchers("/api/login").permitAll()
-
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                .httpBasic(AbstractHttpConfigurer::disable);
+                .httpBasic(Customizer.withDefaults());
 
         return http.build();
     }
-
 }

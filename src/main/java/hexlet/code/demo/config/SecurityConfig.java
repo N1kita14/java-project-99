@@ -71,15 +71,12 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                "/", "/index.html",
-                                "/favicon.ico",
-                                "/*.js", "/*.css", "/*.map",
-                                "/assets/**",
-                                "/swagger-ui.html", "/swagger-ui/**", "/v3/**",
-                                "/h2-console/**"
-                        ).permitAll()
-                        .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/api/login").permitAll()
+                        .requestMatchers("/", "/index.html").permitAll()
+                        .requestMatchers("/assets/**").permitAll()
+                        .requestMatchers("/v3/**").permitAll()
+                        .requestMatchers("/swagger-ui.html", "/swagger-ui/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session ->

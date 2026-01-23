@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 @Inherited
 @SpringBootTest
 @AutoConfigureMockMvc
-@AutoConfigureEmbeddedDatabase
+@AutoConfigureEmbeddedDatabase(type = AutoConfigureEmbeddedDatabase.DatabaseType.H2)
 @ActiveProfiles("test")
 @Import(TestDataProviderConfig.class)
 public @interface IntegrationTest {

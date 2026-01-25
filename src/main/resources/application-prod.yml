@@ -14,5 +14,5 @@ logging:
     com.hexlet: info
 
 sentry:
-  dsn: https://9da511697ed274233841586f4bbe4639@o4510262112288768.ingest.de.sentry.io/4510262113927248
+  dsn: https://32f8e938f883412355ab7bd37c5cd73f@o4510771997442048.ingest.de.sentry.io/4510772003274832
   send-default-pii: true

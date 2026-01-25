@@ -6,7 +6,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
     id("org.sonarqube") version "6.2.0.5505"
     id("io.freefair.lombok") version "9.0.0"
-    id("io.sentry.jvm.gradle") version "5.12.1"
+    id("io.sentry.jvm.gradle") version "5.12.2"
 }
 
 group = "hexlet.code"
@@ -44,6 +44,7 @@ dependencies {
     implementation("org.openapitools:jackson-databind-nullable:0.2.7")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13")
+    implementation("io.sentry:sentry-opentelemetry-agent:8.31.0")
 
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.postgresql:postgresql")
@@ -76,7 +77,8 @@ sonar {
 
 sentry {
     includeSourceContext = true
-    org = "nikita14"
+
+    org = "nikita-ny"
     projectName = "java-spring-boot"
     authToken = System.getenv("SENTRY_AUTH_TOKEN")
 }

@@ -199,8 +199,9 @@ class LabelControllerTest {
 
     @Test
     void deleteLabel() throws Exception {
-        String labelName = "bug";
-        Label label = labelRepository.findByName(labelName).orElseGet(Assertions::fail);
+        Label label = new Label();
+        label.setName("tempLabelForDeletion");
+        label = labelRepository.save(label);
 
         var request = delete("/api/labels/" + label.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
@@ -208,7 +209,7 @@ class LabelControllerTest {
                 .andDo(print())
                 .andExpect(status().isNoContent())
                 .andReturn();
-        assertThat(labelRepository.findByName(labelName)).isEmpty();
+        assertThat(labelRepository.findById(label.getId())).isEmpty();
     }
 
     @Test

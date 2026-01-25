@@ -234,18 +234,13 @@ class TaskControllerTest {
 
     @Test
     void deleteTaskStatus() throws Exception {
-        // Выполняем DELETE-запрос на удаление задачи
         var request = delete("/api/tasks/" + testTask.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
-
-        // Выполняем запрос и ожидаем статус 204 (успешное удаление)
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent())  // Ожидаем статус 204 для успешного удаления
+                .andExpect(status().isNoContent())
                 .andReturn();
 
-        // Проверяем, что задача удалена
-        assertThat(taskRepository.findById(testTask.getId())).isEmpty();  // Вместо findAll() используем findById() для проверки конкретной задачи
+        assertThat(taskRepository.findById(testTask.getId())).isEmpty();
     }
-
 }

@@ -200,17 +200,14 @@ class LabelControllerTest {
     @Test
     void deleteLabel() throws Exception {
         String labelName = "bug";
-
-        Label label = labelRepository.findByName(labelName).orElseThrow(() -> new AssertionError("Label not found"));
+        Label label = labelRepository.findByName(labelName).orElseGet(Assertions::fail);
 
         var request = delete("/api/labels/" + label.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
-
         mockMvc.perform(request)
                 .andDo(print())
                 .andExpect(status().isNoContent())
                 .andReturn();
-
         assertThat(labelRepository.findByName(labelName)).isEmpty();
     }
 

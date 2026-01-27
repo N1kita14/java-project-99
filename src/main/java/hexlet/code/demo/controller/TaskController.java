@@ -4,7 +4,6 @@ import hexlet.code.demo.dto.task.TaskCreateDto;
 import hexlet.code.demo.dto.task.TaskFiltrationDto;
 import hexlet.code.demo.dto.task.TaskResponseDto;
 import hexlet.code.demo.dto.task.TaskUpdateDto;
-import hexlet.code.demo.repository.TaskRepository;
 import hexlet.code.demo.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +30,6 @@ import java.util.List;
 public class TaskController {
 
     private final TaskService taskService;
-    private final TaskRepository taskRepository;
 
     @GetMapping("/{id}")
     public TaskResponseDto getTask(@PathVariable Long id) {
@@ -59,13 +57,8 @@ public class TaskController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
-        if (taskRepository.existsByTaskStatusId(id)) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).build();
-        }
-
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
-        return ResponseEntity.noContent().build();
     }
-
 }

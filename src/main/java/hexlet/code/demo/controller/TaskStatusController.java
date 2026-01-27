@@ -7,6 +7,7 @@ import hexlet.code.demo.service.TaskStatusService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import hexlet.code.demo.repository.TaskRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,7 @@ import java.util.List;
 public class TaskStatusController {
 
     private final TaskStatusService taskStatusService;
+    private final TaskRepository taskRepository;
 
     @GetMapping("/{id}")
     public TaskStatusResponseDto getTaskStatus(@PathVariable Long id) {
@@ -55,8 +57,13 @@ public class TaskStatusController {
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteTaskStatus(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteTaskStatus(@PathVariable Long id) {
+        if (taskRepository.existsByTaskStatusId(id)) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        }
+
         taskStatusService.deleteTaskStatus(id);
+        return ResponseEntity.noContent().build();
     }
+
 }

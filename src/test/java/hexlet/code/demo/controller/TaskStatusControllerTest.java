@@ -196,12 +196,18 @@ public class TaskStatusControllerTest {
         String statusName = dataftTaskStatus.getName();
         var request = delete("/api/task_statuses/" + dataftTaskStatus.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
+
+        // Изменяем ожидаемый статус на 409 Conflict
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent())
+                .andExpect(status().isConflict())  // Ожидаем 409 статус
+                .andExpect(content().string(containsString(TASK_STATUS_DELETE_ERROR_MESSAGE)))  // Ожидаем ошибку при удалении
                 .andReturn();
-        assertThat(taskStatusRepository.findBySlug(statusName)).isEmpty();
+
+        // Проверяем, что статус задачи остался в репозитории
+        assertThat(taskStatusRepository.findBySlug(statusName)).isNotEmpty();
     }
+
 
     @Test
     void deleteTaskStatusWithAssignedTaskConflict() throws Exception {

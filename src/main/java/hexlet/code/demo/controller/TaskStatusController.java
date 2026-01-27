@@ -61,7 +61,6 @@ public class TaskStatusController {
         if (taskRepository.existsByTaskStatusId(id)) {
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
-
         taskStatusService.deleteTaskStatus(id);
         return ResponseEntity.noContent().build();
     }

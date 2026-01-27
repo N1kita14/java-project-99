@@ -27,6 +27,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 import java.util.List;
 
@@ -200,7 +201,7 @@ public class TaskStatusControllerTest {
                 .andDo(print())
                 .andExpect(status().isNoContent())
                 .andReturn();
-        assertThat(taskStatusRepository.findBySlug(statusName)).isEmpty();
+        assertThat(taskStatusRepository.findBySlug(dataftTaskStatus.getSlug())).isEmpty();
     }
 
     @Test
@@ -208,13 +209,18 @@ public class TaskStatusControllerTest {
         Task testTask = Instancio.of(testModelGenerator.getTaskModel()).create();
         testTask.setAssignee(testUser);
         testTask.setTaskStatus(dataftTaskStatus);
-        taskRepository.save(testTask);
+        taskRepository.saveAndFlush(testTask);
 
+        assertThat(taskRepository.existsByTaskStatusId(dataftTaskStatus.getId())).isTrue();
         var request = delete("/api/task_statuses/" + dataftTaskStatus.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
+
         mockMvc.perform(request)
                 .andDo(print())
                 .andExpect(status().isConflict())
                 .andExpect(content().string(containsString(TASK_STATUS_DELETE_ERROR_MESSAGE)));
+
+        assertThat(taskStatusRepository.findBySlug(dataftTaskStatus.getSlug())).isNotEmpty();
     }
+
 }

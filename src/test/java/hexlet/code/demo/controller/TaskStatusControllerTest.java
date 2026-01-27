@@ -196,16 +196,12 @@ public class TaskStatusControllerTest {
         String statusName = dataftTaskStatus.getName();
         var request = delete("/api/task_statuses/" + dataftTaskStatus.getId())
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken);
-
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isConflict())
-                .andExpect(content().string(containsString(TASK_STATUS_DELETE_ERROR_MESSAGE)))
+                .andExpect(status().isNoContent())
                 .andReturn();
-
-        assertThat(taskStatusRepository.findBySlug(statusName)).isNotEmpty();
+        assertThat(taskStatusRepository.findBySlug(statusName)).isEmpty();
     }
-
 
     @Test
     void deleteTaskStatusWithAssignedTaskConflict() throws Exception {

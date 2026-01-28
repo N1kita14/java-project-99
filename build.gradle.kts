@@ -96,6 +96,6 @@ tasks.jacocoTestReport {
     }
 }
 //
-tasks.named("sentryBundleSourcesJava") {
+tasks.register("sentryBundleSourcesJava") {
     enabled = System.getenv("SENTRY_AUTH_TOKEN") != null
 }

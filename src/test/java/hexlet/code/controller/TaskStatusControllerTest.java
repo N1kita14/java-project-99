@@ -180,9 +180,10 @@ public class TaskStatusControllerTest {
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(stringRequestBody);
+
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent());
+                .andExpect(status().isNoContent());  // Ожидаем 204 No Content
     }
 
     @Test

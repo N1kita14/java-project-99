@@ -1,1 +1,1 @@
-rootProject.name = "hexlet.code.demo"
+rootProject.name = "app"

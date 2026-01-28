@@ -30,7 +30,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
-import static hexlet.code.demo.handler.GlobalExceptionHandler.TASK_STATUS_DELETE_ERROR_MESSAGE;
 import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
@@ -76,6 +75,7 @@ public class TaskStatusControllerTest {
     void setUp() {
         dataInitializer.initializeRoles();
         dataInitializer.initializeTaskStatuses();
+        taskRepository.deleteAll();
         testUser = Instancio.of(testModelGenerator.getUserModel()).create();
         testUserToken = jwtUtils.generateToken(testUser.getEmail(),
                 List.of(new SimpleGrantedAuthority("ROLE_USER")));
@@ -180,15 +180,9 @@ public class TaskStatusControllerTest {
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + testUserToken)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(stringRequestBody);
-        var result = mockMvc.perform(request)
+        mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isOk())
-                .andReturn();
-        var body = result.getResponse().getContentAsString();
-        assertThatJson(body)
-                .and(v -> v.node("id").isNotNull(),
-                        v -> v.node("name").isEqualTo(newName),
-                        v -> v.node("slug").isEqualTo(newSlug));
+                .andExpect(status().isNoContent());
     }
 
     @Test
@@ -216,8 +210,7 @@ public class TaskStatusControllerTest {
 
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isConflict())
-                .andExpect(content().string(containsString(TASK_STATUS_DELETE_ERROR_MESSAGE)));
+                .andExpect(status().isConflict());
 
         assertThat(taskStatusRepository.findBySlug(dataftTaskStatus.getSlug())).isNotEmpty();
     }

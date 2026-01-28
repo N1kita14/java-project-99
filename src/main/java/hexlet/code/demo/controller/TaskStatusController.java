@@ -51,9 +51,10 @@ public class TaskStatusController {
     }
 
     @PutMapping("/{id}")
-    public TaskStatusResponseDto updateTaskStatus(@PathVariable Long id,
-                                                  @Valid @RequestBody TaskStatusUpdateDto dto) {
-        return taskStatusService.updateTaskStatus(id, dto);
+    public ResponseEntity<Void> updateTaskStatus(@PathVariable Long id,
+                                                 @Valid @RequestBody TaskStatusUpdateDto dto) {
+        taskStatusService.updateTaskStatus(id, dto);
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")

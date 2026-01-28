@@ -22,7 +22,7 @@ java {
 }
 
 application {
-    mainClass = "hexlet.code.demo.AppApplication"
+    mainClass = "hexlet.code.AppApplication"
 }
 
 configurations {

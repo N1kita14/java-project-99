@@ -70,7 +70,7 @@ class UserControllerTest {
 
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent())  // Ожидаем статус 204
+                .andExpect(status().isNoContent())
                 .andReturn();
 
         assertThat(userRepository.findById(testUser.getId())).isEmpty();
@@ -100,7 +100,7 @@ class UserControllerTest {
 
         mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent())  // Ожидаем статус 204
+                .andExpect(status().isNoContent())
                 .andReturn();
 
         assertThat(userRepository.findById(anotherUser.getId())).isEmpty();

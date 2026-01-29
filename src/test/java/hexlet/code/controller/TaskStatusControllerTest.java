@@ -181,9 +181,16 @@ public class TaskStatusControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(stringRequestBody);
 
-        mockMvc.perform(request)
+        var result = mockMvc.perform(request)
                 .andDo(print())
-                .andExpect(status().isNoContent());  // Ожидаем 204 No Content
+                .andExpect(status().isOk())
+                .andReturn();
+        var body = result.getResponse().getContentAsString();
+        assertThatJson(body)
+                .and(v -> v.node("id").isEqualTo(dataftTaskStatus.getId()),
+                        v -> v.node("name").isEqualTo(newName),
+                        v -> v.node("slug").isEqualTo(newSlug),
+                        v -> v.node("createdAt").isNotNull());
     }
 
     @Test
